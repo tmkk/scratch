@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <OpenGL/OpenGL.h>
 
+/* test */
+
 int main(void)
 {
 	int i;
