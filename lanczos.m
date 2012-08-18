@@ -242,7 +242,7 @@ int main(int argc, char *argv[])
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	NSImage *img = [[NSImage alloc] initWithContentsOfFile:[NSString stringWithUTF8String:argv[1]]];
 	double scale = atof(argv[2]);
-	if(0) {
+	if(1) {
 		int beforeX,beforeY,afterX,afterY;
 		[img setCacheMode:NSImageCacheNever];
 		NSImageRep *rep = [img bestRepresentationForDevice:nil];
@@ -263,7 +263,7 @@ int main(int argc, char *argv[])
     	NSBitmapImageRep *bitmapImageRep = [NSBitmapImageRep imageRepWithData:data];
 		data = [bitmapImageRep representationUsingType: NSPNGFileType properties: nil];
 		[data writeToFile: @"test_cocoa.png" atomically: NO];
-		//return 0;
+		return 0;
 	}
 	NSBitmapImageRep *rep = [NSBitmapImageRep imageRepWithData:[img TIFFRepresentation]];
 	//NSBitmapImageRep *rep = [NSBitmapImageRep imageRepWithData:[NSData dataWithContentsOfFile:[NSString stringWithUTF8String:argv[1]]]];
